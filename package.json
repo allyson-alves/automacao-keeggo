@@ -1,0 +1,31 @@
+{
+  "name": "automacao-keeggo",
+  "version": "1.0.0",
+  "description": "Teste de automação Keeggo",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:open:mobile": "cypress open --config viewportWidth=410 viewportHeight=860",
+    "test": "cypress run",
+    "test:mobile": "cypress run --config viewportWidth=410 viewportHeight=860"
+  },  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allyson-alves/automacao-keeggo.git"
+  },
+  "keywords": [
+    "Prova",
+    "Cypress.io",
+    "Teste de Automação Keeggo",
+    "My Store"
+  ],
+  "author": "Allyson Alves <henrique_vlr@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/allyson-alves/automacao-keeggo/issues"
+  },
+  "homepage": "https://github.com/allyson-alves/automacao-keeggo#readme",
+  "devDependencies": {
+    "cypress": "^9.5.1"
+  }
+}
