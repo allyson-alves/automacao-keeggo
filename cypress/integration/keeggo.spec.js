@@ -12,20 +12,24 @@ describe('Teste de Automação Keeggo', function() {
         cy.get('#passwd').type("teste").should('be.visible')
         cy.contains('button', 'Sign in').click()
 
-        //cy.get('.T-shirts').click()
         cy.get('#search_query_top').type('Faded Short Sleeve T-shirts').should('have.value', 'Faded Short Sleeve T-shirts')
-        //cy.clock()
         cy.get('.ac_even').click()
         
         cy.contains('button', 'Add to cart').dblclick().should('be.visible')       
         
 
         cy.get('#search_query_top').type('Blouse').should('have.value', 'Blouse')
-        cy.clock()
         cy.get('.ac_even').click()
         
         cy.contains('button', 'Add to cart').dblclick().should('be.visible')
 
+        cy.clock()
         cy.get('[title="View my shopping cart"]').click().should('be.visible')
+        cy.get('.cart_navigation > .button > span').click().should('be.visible')
+        cy.get('.cart_navigation > .button > span').click().should('be.visible')
+        cy.get('#cgv').click().should('not.be.visible')
+        cy.tick(3500)
+        cy.get('.cart_navigation > .button > span').click().should('be.visible')
+
     })
 })
