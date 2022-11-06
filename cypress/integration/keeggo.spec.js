@@ -14,11 +14,18 @@ describe('Teste de Automação Keeggo', function() {
 
         //cy.get('.T-shirts').click()
         cy.get('#search_query_top').type('Faded Short Sleeve T-shirts').should('have.value', 'Faded Short Sleeve T-shirts')
-        cy.get('#searchbox > .btn').click()
+        //cy.clock()
+        cy.get('.ac_even').click()
+        
+        cy.contains('button', 'Add to cart').dblclick().should('be.visible')       
+        
 
-        cy.get('.product_img_link > .replace-2x').click()
-        cy.tick(5000)
+        cy.get('#search_query_top').type('Blouse').should('have.value', 'Blouse')
+        cy.clock()
+        cy.get('.ac_even').click()
+        
+        cy.contains('button', 'Add to cart').dblclick().should('be.visible')
 
-        //cy.contains('buttom', 'Add to cart').trigger('mouserover')
+        cy.get('[title="View my shopping cart"]').click().should('be.visible')
     })
 })
